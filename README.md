@@ -85,3 +85,49 @@ Archivo con todas las consultas de la tarea:
 ### 1. Clonar el repositorio
 ```bash
 git clone https://github.com/USUARIO/streamnow_mongodb_tarea4
+
+### 2. Conexión a MongoDB (Atlas o Local)
+✔ Si fuera local (no se usó por limitación técnica):
+mongosh "mongodb://localhost:27017/StreamNowDB"
+
+✔ En caso de usar MongoDB Atlas:
+
+Se puede utilizar la consola integrada del navegador, sin necesidad de instalar mongosh.
+
+### 3. Ejecutar el script de inserción
+load("seed_streamnow.js")
+
+### 4. Ejecutar todas las consultas
+load("consultas_mongodb.js")
+
+### 6. 📝 Justificación técnica 
+
+Debido a que el equipo del estudiante no contaba con espacio suficiente para instalar el entorno local de MongoDB (MongoDB Server + mongosh), todas las consultas y estructuras fueron desarrolladas utilizando MongoDB Atlas, donde se validaron colecciones, documentos y relaciones.
+
+Las consultas fueron construidas siguiendo la sintaxis oficial de MongoDB, incluyendo:
+
+Operaciones CRUD
+
+Consultas con operadores
+
+Filtros compuestos
+
+Pipelines de agregación
+
+Y se documentaron los resultados esperados, cumpliendo con el alcance académico de la actividad, aunque la ejecución no se realizó en entorno local.
+
+### 7. 📊 Resultados esperados de las consultas
+
+Aunque no se ejecutaron localmente, se describió su funcionamiento teórico:
+
+Contenido más visto mediante conteo de eventos.
+
+Usuarios con mayor tiempo reproducido (engagement).
+
+Dispositivos más usados para consumir contenido.
+
+Promedios de duración reproducida por contenido.
+
+Segmentación por ciudad, dispositivo o suscripción.
+
+Estos resultados siguen la estructura de StreamNowDB y las mejores prácticas del Aggregation Framework de MongoDB.
